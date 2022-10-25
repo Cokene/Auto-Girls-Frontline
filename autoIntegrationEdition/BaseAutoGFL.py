@@ -36,7 +36,7 @@ class BaseAutoGFL:
         self.windowNameDesktop = "MuMu模拟器"
         self.paused = False  # 暂停脚本进程
 
-        self.IMAGE_PATH = 'C:/Users/shliz/Desktop/Auto_GirlsFrontline/autoIntegrationEdition/initial_IMG/'  # 读取截图路径
+        self.IMAGE_PATH = 'D:/Repositories/Auto_GirlsFrontline/autoIntegrationEdition/initial_IMG/'  # 读取截图路径
         self.SIMULATOR_WIDTH = 750  # 模拟器总宽度
         self.SIMULATOR_HEIGHT = 589  # 模拟器总高度
         self.BOX_TOP = 37  # 画面边框顶部到模拟器顶部的距离
