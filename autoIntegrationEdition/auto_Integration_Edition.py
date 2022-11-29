@@ -206,9 +206,7 @@ class AutoThirteenFourGFL(BattleAutoGFL):
         # self.preface()
         startTime = datetime.datetime.now()
         combatCount = 0
-        firstCombat = False  # 启动时会给一队单独补给并重开
         failCount = 0
-        # combatPause = False
 
         while True:
             # 暂停一下好让我发一会儿呆（不是XD
@@ -234,8 +232,8 @@ class AutoThirteenFourGFL(BattleAutoGFL):
                 if self.isInMap():
                     print("STATE：进入地图")
                     failCount = 0
-                    if firstCombat:
-                        firstCombat = False
+                    if self.firstCombat:
+                        self.firstCombat = False
                         if not self.combatPrepare():
                             self.closeGame()
                         continue
@@ -285,9 +283,9 @@ class AutoThirteenFourGFL(BattleAutoGFL):
                     failCount = 0
                 elif self.isGotoPowerup():
                     print("STATE： 强化提醒界面")
-                    # firstCombat = True
+                    # self.firstCombat = True
                     self.gotoRetire()
-                    # firstCombat = True
+                    # self.firstCombat = True
                     self.back2MainMenu()
                 elif self.isCombatMenu():
                     print("STATE： 战斗菜单")
@@ -302,7 +300,7 @@ class AutoThirteenFourGFL(BattleAutoGFL):
                     failCount = 0
                     self.return2Combat()
                     self.resumeCombat(self.CHOOSE_13_4_IMAGE_BOX)
-                    firstCombat = True
+                    self.firstCombat = True
                 elif self.isMainMenu():
                     print("STATE： 主菜单界面")
                     self.mainMenu2CombatMenu()
@@ -313,7 +311,7 @@ class AutoThirteenFourGFL(BattleAutoGFL):
                     failCount = 0
                 elif self.isDesktop():
                     print("STATE：模拟器桌面")
-                    firstCombat = True
+                    self.firstCombat = True
                     failCount = 0
                     self.startGame()
                     continue
@@ -350,9 +348,9 @@ class AutoSCGFL:
 
 
 if __name__ == '__main__':
-    print("正在启动脚本...")
+    print("正在启动脚本")
     auto13_4 = AutoThirteenFourGFL()
     auto13_4.run()
 
-    # auto13_4.saveStatusImage(auto13_4.COMBAT_FINISH_IMAGE_BOX)
+    # auto13_4.saveStatusImage(auto13_4.IN_MAP_IMAGE_BOX)
     # auto13_4.transback(auto13_4.EPISODE_DRAG_BOX)
