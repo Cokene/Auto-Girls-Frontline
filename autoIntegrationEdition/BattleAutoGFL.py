@@ -4,6 +4,8 @@ class BattleAutoGFL(BaseAutoGFL):
     # 游戏战斗参数变量
     def __init__(self):
         super(BattleAutoGFL, self).__init__()
+        self.firstCombat = False  # 启动时会给一队单独补给并重开
+
         # 图像状态判断区域 #
         self.COMBAT_MENU_IMAGE_BOX = [37, 375, 90, 434, 'combat_menu.png']  # 战斗菜单界面判断区域
         self.IN_MAP_IMAGE_BOX = [615, 434, 712, 481, 'in_map.png']  # 战役地图判断区域
