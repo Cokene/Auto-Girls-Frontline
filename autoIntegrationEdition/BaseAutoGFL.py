@@ -55,8 +55,8 @@ class BaseAutoGFL:
 
         # 启动游戏
         self.START_GAME_STEP1_CLICK_BOX = [98, 96, 130, 124]  # 点击图标启动游戏
-        self.START_GAME_STEP2_CLICK_BOX = [210, 127, 590, 350]  # 点击一次画面
-        self.START_GAME_STEP3_CLICK_BOX = [210, 127, 590, 350]  # 点击画面开始
+        self.START_GAME_STEP2_CLICK_BOX = [210, 127, 450, 350]  # 点击一次画面
+        self.START_GAME_STEP3_CLICK_BOX = [210, 127, 450, 350]  # 点击画面开始
 
         # 关闭游戏
         self.CLOSE_GAME_CLICK_BOX = [393, -25, 401, -13]  # 关闭模拟器中游戏进程
