@@ -23,7 +23,7 @@ class AutoThirteenFourGFL(BattleAutoGFL):
         self.FIGURE_MICROUZI_IMAGE_BOX = [95, 295, 180, 325, 'microuzi.png']  # 燃烧弹人形更换检测判断区域
         self.FIGURE_DETECT_IMAGE_BOX = [95, 295, 180, 325, 'figure_detect.png']  # 燃烧弹人形更换检测判断区域
         self.COMBAT_START_IMAGE_BOX = [600, 445, 727, 481, 'combat_start.png']  # 开启作战判断区域
-        self.COMBAT_FINISH_IMAGE_BOX = [330, 227, 439, 323, 'combat_finish.png']  # 战役完成判断区域
+        self.COMBAT_FINISH_IMAGE_BOX = [435, 302, 521, 331, 'combat_finish.png']  # 战役完成判断区域
 
         # 控制动作区域 #
         # 从作战选择界面进入13-4战役界面
@@ -194,7 +194,7 @@ class AutoThirteenFourGFL(BattleAutoGFL):
 
     # 计划模式
     def planMode(self):
-        print("计划模式")
+        print("计划模式...")
         self.mouseClick(self.AIRPORT_2_CLICK_BOX, 0.8, 1)
         self.mouseClick(self.PLAN_MODE_CLICK_BOX, 1, 1.5)
         self.mouseClick(self.PLAN_POINT1_CLICK_BOX, 0.5, 0.7)
@@ -352,5 +352,5 @@ if __name__ == '__main__':
     auto13_4 = AutoThirteenFourGFL()
     auto13_4.run()
 
-    # auto13_4.saveStatusImage(auto13_4.IN_MAP_IMAGE_BOX)
+    # auto13_4.saveStatusImage(auto13_4.COMBAT_FINISH_IMAGE_BOX)
     # auto13_4.transback(auto13_4.EPISODE_DRAG_BOX)
