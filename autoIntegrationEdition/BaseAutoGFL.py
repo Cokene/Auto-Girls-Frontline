@@ -209,7 +209,7 @@ class BaseAutoGFL:
         mem_used = np.asarray(mem_info.used / 1024 / 1024).round()
         mem_free = np.asarray(mem_info.free / 1024 / 1024).round()
         # 计算可用显存占比当可分配显存不足10%时关闭游戏进行释放
-        if mem_usage < 0.1:
+        if mem_usage < 0.05:
             print("可用显存已严重不足")
             print("总显存: {}MB  已用显存: {}MB  可用显存: {}MB".format(mem_total, mem_used, mem_free))
             self.closeGame()
