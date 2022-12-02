@@ -40,7 +40,7 @@ class AutoThirteenFourGFL(BattleAutoGFL):
         self.END_COMBAT_STEP2_CLICK_BOX = [390, 316, 450, 345]  # 确认终止作战
 
         # 机场位置点
-        self.AIRPORT_1_CLICK_BOX = [0, 303, 5, 314]  # 左机场
+        self.AIRPORT_1_CLICK_BOX = [0, 303, 3, 314]  # 左机场
         self.AIRPORT_2_CLICK_BOX = [365, 244, 378, 259]  # 右机场
 
         # 更换打手Echelon formation
@@ -125,7 +125,7 @@ class AutoThirteenFourGFL(BattleAutoGFL):
     # 开始13-4作战战役
     def start13_4(self):
         print("ACTION: 启动13-4")
-        self.mouseClick(self.EPISODE_4_CLICK_BOX, 1, 1)
+        self.mouseClick(self.EPISODE_4_CLICK_BOX, 1.5, 1.5)
         self.mouseClick(self.ENTER_COMBAT_CLICK_BOX, 6, 7)
 
     # 终止13-4作战战役（作战界面）
@@ -331,7 +331,9 @@ class AutoThirteenFourGFL(BattleAutoGFL):
                         # 截取全幅大小图像
                         img = self.getImage([0, 0, 1, 1])
                         # 记录异常发生时当前具体状态信息图像
-                        img.save("errorRecord/" + str(datetime.datetime.now()) + str(combatCount) + ".png")
+                        currentTime = str(datetime.datetime.now()).split(' ')
+                        img.save("errorRecord/" + currentTime[0] + "-" + currentTime[1].split('.')[0]
+                                 + "-" + str(combatCount) + "rounds.png")
                         print(">>> ", datetime.datetime.now(), " 无法确定当前状态,关闭重启！")
                         self.closeGame()
                     else:
