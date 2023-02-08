@@ -1,3 +1,5 @@
+import time
+
 from BaseAutoGFL import *
 
 class BattleAutoGFL(BaseAutoGFL):
@@ -353,6 +355,7 @@ class BattleAutoGFL(BaseAutoGFL):
     # 结束战役作战
     def endCombat(self, CONSTANT_IMAGE_BOX):
         print("ACTION: 战役结算")
+        time.sleep(1)
         self.mouseClick(self.END_COMBAT_CLICK_BOX, 5, 6)
         if not self.ImagesJudgeLoop(CONSTANT_IMAGE_BOX, 100):
             return False
