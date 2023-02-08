@@ -35,7 +35,7 @@ class AutoThirteenFourGFL(BattleAutoGFL):
 
         # 开始13-4的战役
         self.EPISODE_4_CLICK_BOX = [375, 369, 450, 398]  # 选择第4节
-        self.ENTER_COMBAT_CLICK_BOX = [540, 375, 600, 404]  # 打开作战子页
+        self.ENTER_COMBAT_CLICK_BOX = [540, 380, 630, 400]  # 打开作战子页
         self.END_COMBAT_STEP1_CLICK_BOX = [540, 328, 600, 351]  # 终止作战
         self.END_COMBAT_STEP2_CLICK_BOX = [390, 316, 450, 345]  # 确认终止作战
 
